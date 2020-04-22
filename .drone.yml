@@ -19,7 +19,6 @@ steps:
     image: node:current-alpine
     commands:
       - yarn
-      - cd packages/uikit-react
       - yarn build
 
   - name: publish
@@ -28,7 +27,6 @@ steps:
       CI_DOMAIN:
         from_secret: CI_DOMAIN
     commands:
-      - cd packages/uikit-react
       - yarn publish --registry="https://$CI_DOMAIN/repository/npm-publish"
     when:
       branch: master
