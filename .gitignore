@@ -4,3 +4,5 @@ yarn.lock
 .DS_Store
 /dist
 .npmrc
+storybook-static
+stats.html
